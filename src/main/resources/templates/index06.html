@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/pages-cart.css" th:href="@{/css/pages-cart.css}">
+</head>
+<body>
+<!--把片段插入当前位置-->
+<div th:insert="~{footer::copy}"></div>
+<br>
+<!--使用片段内容替换当前标签-->
+<div th:replace="~{footer::copy}"></div>
+<br>
+<!--将片段内容不带样式插入-->
+<div th:include="~{footer::copy}"></div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/pages-cart.css" th:href="@{/css/pages-cart.css}">
+</head>
+<body>
+时间：<span th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}"></span><br>
+金额：<span th:text="'￥'+${#numbers.formatDecimal(price,5,2)}"></span><br>
+<p th:text="${#strings.abbreviate(text,60)}"></p>
+<!--判断字符串是否为空-->
+<span th:if="${!#strings.isEmpty(str)}">不为空</span>
+<!--截取字符串-->
+<span th:text="${#strings.substring(str,2,3)}"></span>
+</body>
+</html>

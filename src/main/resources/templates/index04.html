@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${name}"></h1><br>
+<input type="text" name="name" th:value="${name}"><br>
+<em th:size="${name}"></em><br>
+
+<!--字符串拼接 1-->
+<span th:text="'欢迎：'+${name}"></span><br>
+<!--字符串拼接 2-->
+<span th:text="|欢迎：${name}|"></span>
+
+</body>
+</html>

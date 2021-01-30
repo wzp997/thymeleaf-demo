@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/pages-cart.css" th:href="@{/css/pages-cart.css}">
+</head>
+<body>
+<!--条件成立时-->
+<h1 th:if="${flag=='true'}">true</h1>
+<!--条件不成立时-->
+<h1 th:unless="${flag=='true'}">false</h1>
+<!--switch-->
+<div th:switch="${menu}">
+    <p th:case="admin">User is a admin</p>
+    <p th:case="${manager}">User is a manager</p>
+</div>
+</body>
+</html>
